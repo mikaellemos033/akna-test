@@ -6,13 +6,14 @@ use PDO;
 
 class Insert extends ORM
 {
-	public function run($table, array $params)
+	public function run($table, $model)
 	{
-		$fields      = $this->fields($params);
+		$params = array_filter(get_object_vars($model));
+		$fields = $this->fields($params);
 		$this->query = sprintf('INSERT INTO %s (%s) VALUES (%s)', $table, str_replace(':', '', implode(',', $fields)), implode(',', $fields));
 		$this->binds = $params;
 
-		return $this;
+		return $this->execute();
 	}
 
 	public function execute()

@@ -4,19 +4,14 @@ namespace App\Repository;
 
 use \PDO;
 Use App\Model\Shop;
+use Sect\Database\Operation\Select;
 use Sect\Database\Operation\Insert;
 
-class ShopRepository {
+class ShopRepository extends BaseRepository {
   
-  private $connect;
-
-  public function __construct(PDO $connect) {
-    $this->connect = $connect;
-  }
-
   public function createIfNotExists(Shop $shop) {
-    $insert = new Insert($this->connect);
-    $select = new Select($this->connect);
+    $insert = new Insert($this->getConnect());
+    $select = new Select($this->getConnect());
     $exists = $select->run(Shop::TABLE_NAME)
                      ->where(
                        'product_id = :product and month = :month', 
@@ -26,6 +21,11 @@ class ShopRepository {
                      ->execute();
 
     if ($exists) return $exists;
-    return $db->run(Shop::TABLE_NAME, $shop);
+    return $insert->run(Shop::TABLE_NAME, $shop);
   }
+
+  public function getTable(): string {
+    return Shop::TABLE_NAME;
+  }
+  
 }

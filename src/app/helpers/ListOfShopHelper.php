@@ -2,23 +2,28 @@
 
 namespace App\Helpers;
 
+use App\Utils\DataResourceUtil;
+use App\Utils\Environment;
+
 class ListOfShopHelper {
 
   const FILE_NAME = 'resources.replaces';
   
   public static function replaces(array $listOfShops) {
 
-    $replaces = DataResourceUtil::getData(ListOfShopHelper::FILE_NAME);
+    $replaces = DataResourceUtil::getData(Environment::getEnvironment(ListOfShopHelper::FILE_NAME));
 
     foreach ($listOfShops as &$categories) {
-      foreach($categories as &$products) {
+      
+      foreach($categories as &$products) {        
         foreach ($products as $product => $quantity) {
-          if (!array_key_exists($product, $replaces)) {
-            $products[$replaces[$product]] = $quantity;
+          if (array_key_exists($product, $replaces)) {            
             unset($products[$product]);
+            $products[$replaces[$product]] = $quantity;
           }
         }
       }
+      
     }
 
     return $listOfShops;

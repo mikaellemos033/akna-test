@@ -6,7 +6,7 @@ use App\Model\Month;
 
 class MonthUtil {
 
-  public static function getMonthByText($month) {
+  public static function getMonthByText($month) {    
     switch(strtolower($month)) {      
       case 'fevereiro':
         return Month::FEB;

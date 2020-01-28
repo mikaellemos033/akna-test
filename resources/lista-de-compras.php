@@ -1,15 +1,15 @@
 <?php
 
-// OBS: O valor inteiro/nÃºmero do produto Ã© a quantidade:
-// Ex: 'PÃ£o de forma' => QUANTIDADE
+// OBS: O valor inteiro/número do produto é a quantidade:
+// Ex: 'Pão de forma' => QUANTIDADE
 
 return [
     'janeiro' => [
         'alimentos' => [
-            'PÃ£o de forma' => 100,
+            'Pão de forma' => 100,
             'Nutella' => 50,
             'Arroz' => 200,
-            'FeijÃ£o' => 150,
+            'Feijão' => 150,
         ],
         'limpeza' => [
             'Veja multiuso' => 50,
@@ -45,8 +45,8 @@ return [
             'Berinjela' => 100,
             'Pepino' => 100,
             'Arroz integral' => 500,
-            'FeijÃ£o' => 500,
-            'FilÃ© de frango' => 500,
+            'Feijão' => 500,
+            'Filé de frango' => 500,
             'Leite desnatado' => 2000,
         ],
         'limpeza' => [
@@ -61,12 +61,12 @@ return [
     ],
     'fevereiro' => [
         'alimentos' => [
-            'PÃ£o de forma' => 50,
+            'Pão de forma' => 50,
             'Queijo minas' => 50,
-            'GelÃ©ria de morango' => 250,
+            'Geléia de morango' => 250,
         ],
         'limpeza' => [
-            'Pano de chÃ£o' => 300,
+            'Pano de chão' => 300,
             'Rodo' => 301,
         ],
         'higiene_pessoal' => [
@@ -79,10 +79,10 @@ return [
         'alimentos' => [
             'Doritos' => 50,
             'Chocolate ao leit' => 100,
-            'FilÃ© Mignon' => 350,
+            'Filé Mignon' => 350,
         ],
         'limpeza' => [
-            'Esponja de aÃ§o' => 100,
+            'Esponja de aço' => 100,
         ],
         'higiene_pessoal' => [
             'Fio dental' => 500,

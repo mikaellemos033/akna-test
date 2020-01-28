@@ -2,8 +2,8 @@
 
 namespace App\Data;
 
-Use App\Util\DataResourceUtil;
-Use App\Util\Environment;
+Use App\Utils\DataResourceUtil;
+Use App\Utils\Environment;
 use App\Helpers\ListOfShopHelper;
 
 class ListShopData {
@@ -11,7 +11,7 @@ class ListShopData {
   const KEY = 'resources.list-shop';
 
   public static function getData() {
-    $listOfShops = DataResourceUtil::getData(Enviroment::getEnvironment(ListShopData::KEY));
+    $listOfShops = DataResourceUtil::getData(Environment::getEnvironment(ListShopData::KEY));        
     return ListOfShopHelper::replaces($listOfShops);
   }
 
