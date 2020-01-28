@@ -3,7 +3,7 @@
 return [
   'db' => [
     'dbname' => 'akna',
-    'host' => '192.168.99.100',
+    'host' => 'localhost',
     'driver' => 'mysql',
     'user' => 'root',
     'password' => 'root',
