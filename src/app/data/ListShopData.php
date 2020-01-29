@@ -11,7 +11,7 @@ class ListShopData {
   const KEY = 'resources.list-shop';
 
   public static function getData() {
-    $listOfShops = DataResourceUtil::getData(Environment::getEnvironment(ListShopData::KEY));        
+    $listOfShops = DataResourceUtil::getResource(Environment::getEnvironment(ListShopData::KEY));        
     return ListOfShopHelper::replaces($listOfShops);
   }
 

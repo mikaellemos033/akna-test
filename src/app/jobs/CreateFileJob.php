@@ -5,6 +5,7 @@ namespace App\Jobs;
 use App\Data\ListShopData;
 use App\Services\CreateFileCsv;
 use App\Services\ConvertListShopCsv;
+use App\Services\OrderService;
 use SantoConsole\Job\JobConsole;
 
 class CreateFileJob extends JobConsole {
@@ -23,9 +24,10 @@ class CreateFileJob extends JobConsole {
 
     $convertCsv = new ConvertListShopCsv();
     $createFileCsv = new CreateFileCsv();
+    $orderData = new OrderService();
+    $listShops = $orderData->order(ListShopData::getData());
 
-    $createFileCsv->createFile(CreateFileJob::FILE_NAME, $convertCsv->convert(ListShopData::getData()));
-
+    $createFileCsv->createFile(CreateFileJob::FILE_NAME, $convertCsv->convert($listShops));
     $this->comment->success("ARQUIVO GERADO\n");
   }
 

@@ -6,7 +6,7 @@ class DataResourceUtilTest extends PHPUnit_Framework_TestCase {
 
   public function testGetResource() {    
     DataResourceUtil::setRootDir('.');
-    $replaces = DataResourceUtil::getData('replaces.php');
+    $replaces = DataResourceUtil::getResource('replaces.php');
 
     $this->assertNotEmpty($replaces);
   }

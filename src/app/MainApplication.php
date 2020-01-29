@@ -13,7 +13,7 @@ class MainApplication {
   public static function main($argv) {
     DataResourceUtil::setRootDir(sprintf("%s/../..", __DIR__));
     
-    $configResource = DataResourceUtil::getData('../environments/environment.php');
+    $configResource = DataResourceUtil::getData('environments/environment.php');
     $command = new Command();
     
     Environment::setEnvironments($configResource);    

@@ -11,7 +11,7 @@ class ListOfShopHelper {
   
   public static function replaces(array $listOfShops) {
 
-    $replaces = DataResourceUtil::getData(Environment::getEnvironment(ListOfShopHelper::FILE_NAME));
+    $replaces = DataResourceUtil::getResource(Environment::getEnvironment(ListOfShopHelper::FILE_NAME));
 
     foreach ($listOfShops as &$categories) {
       

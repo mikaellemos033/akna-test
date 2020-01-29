@@ -6,7 +6,7 @@ class ConvertListShopCsv {
   
   public function convert(array $listShops) {
 
-    $csvItems = ['Mês', 'Categoria', 'Produto', 'Quantidade'];
+    $csvItems = [['Mês', 'Categoria', 'Produto', 'Quantidade']];
 
     foreach ($listShops as $month => $categories) {
       foreach($categories as $category => $products) {
