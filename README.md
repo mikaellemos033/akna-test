@@ -8,7 +8,7 @@ Você precisará do **Docker** ou do **Mysql** instalado na sua maquina e do **P
 
 Caso opte por usar o Docker basta usar o comando ``docker-compose up`` para subir o banco de dados.
 
-Caso use a instancia Mysql da sua maquina, execute o arquivo **akana.sql** presente na pasta ``devops/db`` e edite o arquivo **environments/environment.php**
+Caso use a instancia Mysql da sua maquina, execute o arquivo **akna.sql** presente na pasta ``devops/db`` e edite o arquivo **environments/environment.php**
 
 Após subir o banco de dados, rode o comando `` composer install`` 
 
