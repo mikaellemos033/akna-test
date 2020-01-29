@@ -13,9 +13,10 @@ Caso use a instancia Mysql da sua maquina, execute o arquivo **akana.sql** prese
 Após subir o banco de dados, rode o comando `` composer install`` 
 
 ### Comandos
-Para executar o comando que gera o arquivo use `` php akna to:csv``
+Para executar o comando que gera o arquivo use ``php akna to:csv``.
+o arquivo gerado será encontrado na pasta ``/tmp``
 
-Para persiste os dados na base use o comando  `` php akna to:save``
+Para persistir os dados na base use o comando  ``php akna to:save``
 
 ### Testes
 Para executar os testes use o comando ``phpunit`` ou ``./vendor/bin/phpunit``
